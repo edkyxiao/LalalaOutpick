@@ -1,0 +1,31 @@
+Map: Embed google maps
+
+
+Domain 还要 subscribe
+
+Index:
+Carousel: Images
+tagline: "queer | out | proud"
+ack country
+subtitle, 
+
+Click tile: ABOUT US
+textG
+our people
+image
+People
+
+Menu: About, documentary
+documentary: poster, 获奖记录，影片简介
+Past events:  map embed google maps (top) (pins for events, filter year, month, location: city, lake, on-site, state park)
+number of events found:
+list of events with title, read more, and image
+click in for:
+data slide： kg of rubbish, types, volunteer num,
+brief text (from instagram),
+more images (manual scroll) and 
+back and next buttons
+faqs: Images, and standard faqs
+Contact us: cused contact form
+
+Ask for all image, logo (clear background)
