@@ -1,0 +1,137 @@
+/* Home page */
+/* Background */
+body, html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  font-family: impact, impact-w01-2010, impact-w02-2010, impact-w10-2010, sans-serif;
+}
+.gradient {
+  position: absolute;
+  border-radius: 5%;
+  filter: blur(60px);
+  opacity: 0.9;
+}
+.blur-bg {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0; left: 0;
+  z-index: -1;
+}
+.gradient {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(90px);
+  opacity: 0.7;
+}
+.gradient.one {
+  width: 300rem; height: 60rem;
+  left: -150rem; top: -20rem;
+  background: radial-gradient(circle, rgb(6, 127, 6), transparent 50%);
+  z-index: -2;
+}
+.gradient.two {
+  width: 300rem; height: 60rem;
+  right: -150rem; top: -20rem;
+  background: radial-gradient(circle, #e4b16b, transparent 50%);
+  z-index: -3;
+}
+.gradient.three {
+  width: 1000rem; height: 60rem;
+  left: -450rem; bottom: -40rem;
+  background: radial-gradient(circle, #7084e8, transparent 30%);
+}
+
+/* Content */
+.content_home {
+    margin: 3% 20%;
+    opacity: 1;
+    transition: opacity 0.5s ease;
+}
+/* Logo and Carousel */
+.content_positioning {
+    padding: 4rem 2rem 3rem;
+    display: flex;
+    align-items: flex-start;
+    gap: -3rem;
+}
+/* Logo */
+.logo_container img {
+    transform: translateX(10%);
+    z-index: 1; 
+}
+/* Carousel */
+.photo_container {
+    position: relative;
+    width: 454.167px;
+    height: 645.147px;
+    overflow: hidden;
+    margin: auto;
+    z-index: 0;
+}
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+.carousel img {
+    flex-shrink: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Site Title */
+.text_container {
+    padding-top: 4rem;
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -20%);
+}
+.title_container {
+    text-align: center;
+    font-size: 10rem;
+    font-weight: bold;
+    white-space: nowrap;
+    z-index: 1;
+    cursor: pointer;
+}
+#over_flag {    
+    background: url('pages/images/utilities/flag2.png') no-repeat center;
+    background-size: 100% 70%;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+#no_flag {
+    color: rgb(23, 13, 242);
+    display: inline-block;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Tagline */
+.tagline {
+    color: white /* rgb(23, 13, 242)*/;
+    font-size: 2rem;
+    font-weight: normal;
+    font-family: madefor-display,helveticaneuew01-45ligh,helveticaneuew02-45ligh,helveticaneuew10-45ligh,sans-serif;
+    text-align: right;
+    transform: translateY(-300%);
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Acknowledgement of Country */
+#acknowledgement_country {
+    font-family: madefor-display,helveticaneuew01-45ligh,helveticaneuew02-45ligh,helveticaneuew10-45ligh,sans-serif;
+    font-weight: lighter;
+    padding-left: 1rem;
+    transform: translateY(-60%);
+}
+/* Transition */
+.fade-out {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
