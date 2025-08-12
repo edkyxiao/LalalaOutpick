@@ -201,7 +201,7 @@ body, html {
     height: 100%;
 }
 .content {
-    padding: 9rem 5rem;
+    padding: 9rem 10rem;
 }
 .styled_text {
     font-size: 4rem;
@@ -327,4 +327,5 @@ h2 {
     font-weight: bold;
     color: blue;
     text-shadow: 1px 1px 2px navy;
+
 }
