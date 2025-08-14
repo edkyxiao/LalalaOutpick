@@ -205,13 +205,12 @@ body, html {
 }
 .styled_text {
     font-size: 4rem;
-    font-weight: bold;
-    color: blue;
-    font-family: sans-serif;
+    font-weight: normal;
+    color: navy;
+    font-family: 'Nunito Sans', sans-serif;
     text-shadow:
-        2px 2px 0 white,
-        4px 4px 0 blue,
-        6px 6px 0 navy;
+        1px 1px 0 whitesmoke,
+        2px 2px 0 navy;
 }
 .page_title {
     text-align: center;
@@ -238,7 +237,7 @@ p {
 }
 /* Our Story */
 h2 {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: 'Nunito Sans', sans-serif;
     font-size: 3rem;
     font-weight: normal;
     text-align: center;
@@ -264,11 +263,11 @@ h2 {
     padding: 0 3rem;
 }
 .person {
-  text-align: left;
-  border: 1px solid #ccc;
-  padding: 1rem;
-  border-radius: 5%;
-  background-color: rgba(249,249,249,.5);
+    text-align: left;
+    border: 1px solid #ccc;
+    padding: 1rem;
+    border-radius: 5%;
+    background-color: rgba(249,249,249,.5);
 }
 .person img {
     width: 100%;
@@ -278,17 +277,82 @@ h2 {
     margin-bottom: 0.75rem;
 }
 .person h3 {
-  font-size: 1.25rem;
-  margin: 0.25rem 0 2rem 1.25rem;
-  color: #333;
+    font-weight: normal;
+    font-size: 1.25rem;
+    margin: 0.25rem 0 2rem 1.25rem;
+    color: #333;
 }
 .person p {
-  font-size: 1rem;
-  color: #666;
-  line-height: 1.5;
-  text-align: left;
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.5;
+    text-align: left;
 }
 
+/* Doco */
+.outpicker {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    /* border: 1rem solid black; */
+}
+.photo_container {
+    position: relative;
+    width: 700px;
+    height: 400px;
+    overflow: hidden;
+    margin: auto;
+    z-index: 0;
+}
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+.carousel img {
+    flex-shrink: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.buttons {
+    transform: translateY(-60%);
+}
+button {
+    background: rgba(173, 216, 230, .2);
+    padding: .2rem .5rem;
+    border: 1px inset rgba(11, 62, 79, .4);
+    border-radius: 25%;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+button:hover {
+    background: rgba(173, 216, 230, 0.4);
+    border-color: rgba(11, 62, 79, 0.6);
+    transform: scale(1.05);
+}
+button:active {
+    background: rgba(173, 216, 230, 0.6);
+    transform: scale(0.95);
+    border-style: outset;
+}
+.entry {
+    padding-left: 3rem;
+}
+#op_credits {
+    transform: translateY(-70%);
+    font-weight: bold;
+    font-size: 1rem;
+}
+#op_info {
+    transform: translateY(-10%);
+}
+.posters {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(1rem, 1fr));
+    padding-top: 1.5rem;
+}
+.posters img {
+    width: 25rem;
+}
 /* End */
 .end {
     background-color: rgb(119, 141, 111);
@@ -327,6 +391,4 @@ h2 {
     font-weight: bold;
     color: blue;
     text-shadow: 1px 1px 2px navy;
-
 }
-
