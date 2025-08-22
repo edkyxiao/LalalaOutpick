@@ -318,7 +318,7 @@ h2 {
     object-fit: cover;
 }
 .buttons {
-    transform: translateY(-10%);
+    transform: translateY(-50%);
 }
 button {
     background: rgba(173, 216, 230, .2);
@@ -349,6 +349,7 @@ button:active {
 }
 #op_info {
     transform: translateY(-10%);
+    margin: 2rem;
 }
 .posters {
     margin-top: 3rem;
@@ -1376,4 +1377,5 @@ fieldset {
     color: blue;
     text-shadow: 1px 1px 2px navy;
 }
+
 
