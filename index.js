@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let currentIndex = 0;
     const totalSlides = imageCount + 1; // original + clone
 
-    // Preload images (optional)
+    // Preload images
     images.forEach(img => {
         const preload = new Image();
         preload.src = img.src;
@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
         showImage(currentIndex);
     }, 200);
 
-    // Slide every 4 seconds
+    // Slide every 3 seconds
     setInterval(() => {
         currentIndex++;
         showImage(currentIndex);
@@ -39,9 +39,9 @@ document.addEventListener("DOMContentLoaded", () => {
                 carousel.style.transition = 'none';  // disable transition for instant jump
                 currentIndex = 0;
                 carousel.style.transform = `translateX(0)`;
-            }, 500); // match this delay with your CSS transition duration
+            }, 500); // match with CSS transition duration
         }
-    }, 4000);
+    }, 3000);
 
     // From Home to About page
     const title = document.querySelector(".title_container");
@@ -59,4 +59,5 @@ document.addEventListener("DOMContentLoaded", () => {
             }, { once: true });
         })
     } else return;
+
 });
