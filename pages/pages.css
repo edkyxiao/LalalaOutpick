@@ -877,6 +877,9 @@ button:active {
 #faq_img_8 {
     margin-top: 35rem;
 }
+.question h2 {
+    margin: 2rem;
+}
 
 /* End */
 .end {
@@ -1377,5 +1380,6 @@ fieldset {
     color: blue;
     text-shadow: 1px 1px 2px navy;
 }
+
 
 
