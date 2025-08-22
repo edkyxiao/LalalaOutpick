@@ -765,7 +765,7 @@ button:active {
 }
 .event_entry {
     display: grid;
-    width: 80%;
+    width: 95%;
     height: auto;
     grid-template-columns: 60% 10% 30%;
     justify-self: center;
@@ -790,7 +790,7 @@ button:active {
 .text h3 {
     font-size: 1.5rem;
     font-weight: normal;
-    padding-left: 1rem;
+    padding: 1rem;
 }
 .text p {
     font-size: 1rem;
@@ -801,7 +801,7 @@ button:active {
     font-size: .8rem;
     align-self: flex-end;
     display: inline-block;
-    padding: 0.2rem;
+    padding: 0.2rem 0.4rem;
     margin-bottom: 2rem;
     transform: translateX(10%);
     border: 1.5px double navy;
@@ -1380,6 +1380,7 @@ fieldset {
     color: blue;
     text-shadow: 1px 1px 2px navy;
 }
+
 
 
 
