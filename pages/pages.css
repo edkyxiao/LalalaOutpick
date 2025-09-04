@@ -52,8 +52,7 @@ body, html {
     color: blue;
     cursor: pointer;
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+    top: 2rem;
     right: 4rem;
     display: none; /* shown only on mobile */
     z-index: 105;
@@ -157,7 +156,8 @@ body, html {
         width: 5rem;
         height: auto;
         top: 50%;
-        transform: translateY(-50%);
+        left: 50%;
+        transform: translateY(-50% -50%);
     }
     .menu_toggle {
         display: block;
@@ -186,14 +186,16 @@ body, html {
         align-items: center;
         padding: 2rem 3rem 3rem;
         z-index: 1;
+        flex-wrap: wrap;
     }
-    .menu_overlay h2, #toggleLanguage {
+    .menu_overlay h2 {
         margin: 1rem 0;
+        font-size: 1rem;
+        left: 50%;
     }
 }
 
 /* Menu */
-
 /* About */
 /* About Us */
 .all {
@@ -291,6 +293,59 @@ h2 {
     color: #666;
     line-height: 1.5;
     text-align: left;
+}
+
+@media (max-width: 800px) {
+    .styled_text {
+        white-space: nowrap;
+        font-size: 4rem;
+        font-weight: normal;
+        color: navy;
+        font-family: 'Nunito Sans', sans-serif;
+        text-shadow:
+            1px 1px 0 whitesmoke,
+            2px 2px 0 navy;
+        margin: 2rem;
+    }
+    #about_us {
+        width: 80vw;
+        margin-bottom: 1rem;
+    }
+    #about_image_container {
+        display: inline-block;
+        position: relative;
+        transform: translateX(-35%);
+        text-align: center; 
+              
+    }
+    #about_image {
+        max-width: 90vw;
+        height: auto;
+        display: block;  
+    }
+    .about_h2 {
+        white-space: nowrap;
+    }
+    #our_story {
+        width: 80vw;
+    }
+    .grid {
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1.5rem;
+        justify-items: center;
+    }
+    .person {
+        text-align: left;
+        border: 1px solid #ccc;
+        padding: 1rem;
+        border-radius: 10px;
+        width: 80vw;
+        background-color: rgba(249,249,249,.5);
+        margin: 0 auto 1rem;
+        transform: translateX(-47%);
+    }
 }
 
 /* Doco */
@@ -840,6 +895,9 @@ button:active {
     font-size: 1.25rem;
     text-align: justify;
 }
+.question h2 {
+    margin: 2rem;
+}
 .faq_col3 {
     text-align: right;
 }
@@ -877,9 +935,6 @@ button:active {
 #faq_img_8 {
     margin-top: 35rem;
 }
-.question h2 {
-    margin: 2rem;
-}
 
 /* End */
 .end {
@@ -892,7 +947,10 @@ button:active {
     font-weight: lighter;
     color: whitesmoke;
 }
-
+#me {
+    margin-top: 1rem;
+    font-size: 1rem;
+}
 .social_media {
     position: absolute;
     top: 50%;
@@ -1380,8 +1438,3 @@ fieldset {
     color: blue;
     text-shadow: 1px 1px 2px navy;
 }
-
-
-
-
-
