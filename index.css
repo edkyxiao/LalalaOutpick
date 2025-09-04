@@ -139,7 +139,7 @@ body, html {
 }
 
 /* For phone screens */
-@media (max-width: 768px) {
+@media (max-width: 800px) {
     /* Reset & Base */
     * {
       margin: 0;
@@ -266,3 +266,4 @@ body, html {
       margin-bottom: 2rem;
     }
 }
+
