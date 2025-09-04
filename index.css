@@ -172,6 +172,7 @@ body, html {
       margin: .5rem auto 2rem;
       display: block;
       justify-content: center;
+      transform: translateX(1%);
     }
 
     /* Carousel wrapper */
@@ -186,7 +187,6 @@ body, html {
       border-radius: .5rem;
       box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25), 
                   0 4px 8px rgba(0, 0, 0, 0.15);
-      transform: translateX(4%);
     }
 
     .carousel {
@@ -262,7 +262,7 @@ body, html {
       font-weight: lighter;
       color: rgb(0, 0, 0);
       text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-      transform: translateY(250%);
+      transform: translateY(200%);
       margin-bottom: 2rem;
     }
 }
