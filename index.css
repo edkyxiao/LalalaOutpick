@@ -51,11 +51,14 @@ body, html {
     transition: opacity 0.5s ease;
 }
 /* Logo and Carousel */
-.content_positioning {
-    padding: 4rem 2rem 3rem;
-    display: flex;
-    align-items: flex-start;
-    gap: -3rem;
+@media (min-width: 700px) {
+  /* Logo and Carousel */
+  .content_positioning {
+      padding: 4rem 2rem 3rem;
+      display: flex;
+      align-items: flex-start;
+      gap: -3rem;
+  }
 }
 /* Logo */
 .logo_container img {
@@ -134,4 +137,132 @@ body, html {
 .fade-out {
   opacity: 0;
   transition: opacity 0.5s ease;
+}
+
+/* For phone screens */
+@media (max-width: 768px) {
+    /* Reset & Base */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      width: 100%;
+      height: 100%;
+      overflow-x: hidden;
+      font-family: impact, impact-w01-2010, impact-w02-2010, impact-w10-2010, sans-serif;
+      color: white;
+    }
+
+    /* Layout container */
+    .content_home {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    /* Logo */
+    .logo_container img {
+      width: 45vw;
+      max-width: 250px;
+      height: auto;
+      margin: 2rem auto 2rem;
+      display: block;
+      justify-content: center;
+    }
+
+    /* Carousel wrapper */
+    .photo_container {
+      position: relative;
+      width: 65vw;
+      height: 60vh;
+      justify-content: center;
+      aspect-ratio: 3/4; 
+      overflow: hidden;
+      margin: 1rem auto;
+      border-radius: .5rem;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25), 
+                  0 4px 8px rgba(0, 0, 0, 0.15);
+      transform: translateX(4%);
+    }
+
+    .carousel {
+      display: flex;
+      width: 100%;
+      height: 100%;
+      transition: transform 0.6s ease-in-out;
+    }
+
+    .carousel img {
+      flex: 0 0 100%;             
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;   
+    }
+
+    .carousel img.active {
+      display: block;
+    }
+
+    /* Text over carousel */
+    .text_container {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -40%);
+      width: 100%;
+      padding: 0 1rem;
+      color: white;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.9);
+    }
+
+    .title_container {
+      font-size: clamp(3rem, 14vw, 8rem);
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+      white-space: nowrap;
+      text-shadow: 2px 2px 5px rgba(0,0,0,0.4);
+    }
+
+    #over_flag {    
+      background: url('pages/images/utilities/flag2.png') no-repeat center;
+      background-size: 100% 70%;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    #no_flag {
+      color: rgb(23, 13, 242);
+    }
+
+    .tagline {
+      font-size: clamp(1rem, 4vw, 1.5rem);
+      font-weight: normal;
+      margin-top: 0.5rem;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+
+      transform: translateY(10%);
+    }
+
+    /* Acknowledgement */
+    #acknowledgement_country {
+      margin-top: 1rem;
+      font-size: clamp(0.9rem, 3vw, 1.1rem);
+      line-height: 1.5;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+      font-family: madefor-display, helveticaneuew01-45ligh,
+                  helveticaneuew02-45ligh, helveticaneuew10-45ligh, sans-serif;
+      font-weight: lighter;
+      color: rgb(0, 0, 0);
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+      transform: translateY(250%);
+    }
 }
