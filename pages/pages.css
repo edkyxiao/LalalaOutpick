@@ -872,7 +872,7 @@ button:active {
 
 /* Events pages */
 .all_events {
-    background-color: rgba(255, 255, 255, 0.75);
+    background-color: rgba(255, 255, 255, 1);
     height: 100%;
 }
 #back_to_events {
@@ -1578,4 +1578,5 @@ fieldset {
     color: blue;
     text-shadow: 1px 1px 2px navy;
 }
+
 
