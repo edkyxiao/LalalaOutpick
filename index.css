@@ -7,12 +7,6 @@ body, html {
   overflow: hidden;
   font-family: impact, impact-w01-2010, impact-w02-2010, impact-w10-2010, sans-serif;
 }
-.gradient {
-  position: absolute;
-  border-radius: 5%;
-  filter: blur(60px);
-  opacity: 0.9;
-}
 .blur-bg {
   position: fixed;
   width: 100vw;
@@ -46,32 +40,32 @@ body, html {
 
 /* Content */
 .content_home {
-    margin: 3% 20%;
+    margin: 5% 20%;
     opacity: 1;
     transition: opacity 0.5s ease;
+    /* border: 1px solid black; */
 }
-@media (min-width: 700px) {
-  /* Logo and Carousel */
-  .content_positioning {
-      padding: 4rem 2rem 3rem;
-      display: flex;
-      align-items: flex-start;
-      gap: -3rem;
-  }
-}
+
 /* Logo */
 .logo_container img {
-    transform: translateX(10%);
+    top: 10vh;
+    left: 10vw;
+    width: 20%;
+    height: auto;
     z-index: 1; 
+    /* border: 1px solid black; */
 }
+
 /* Carousel */
 .photo_container {
     position: relative;
-    width: 454.167px;
-    height: 645.147px;
+    width: 25vw;
+    height: 70vh;
     overflow: hidden;
     margin: auto;
     z-index: 0;
+    margin-top: -10vh;
+    /* border: 1px solid black; */
 }
 .carousel {
     display: flex;
@@ -85,20 +79,21 @@ body, html {
 }
 
 /* Site Title */
-.text_container {
-    padding-top: 4rem;
-    position: absolute;
-    top: 25%;
-    left: 50%;
-    transform: translate(-50%, -20%);
+.title_tagline {
+  /* border: 1px solid black; */
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  cursor: pointer;
 }
 .title_container {
     text-align: center;
     font-size: 10rem;
     font-weight: bold;
     white-space: nowrap;
-    z-index: 1;
-    cursor: pointer;
+    margin: 0;
 }
 #over_flag {    
     background: url('pages/images/utilities/flag2.png') no-repeat center;
@@ -116,12 +111,12 @@ body, html {
 
 /* Tagline */
 .tagline {
-    color: white /* rgb(23, 13, 242)*/;
+    margin: 0;
+    color: rgb(23, 13, 242);
     font-size: 2rem;
     font-weight: normal;
     font-family: madefor-display,helveticaneuew01-45ligh,helveticaneuew02-45ligh,helveticaneuew10-45ligh,sans-serif;
     text-align: right;
-    transform: translateY(-300%);
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
 }
 
@@ -130,7 +125,10 @@ body, html {
     font-family: madefor-display,helveticaneuew01-45ligh,helveticaneuew02-45ligh,helveticaneuew10-45ligh,sans-serif;
     font-weight: lighter;
     padding-left: 1rem;
-    transform: translateY(-60%);
+    /* border: 1px solid black; */
+    text-align: center;
+    width: 80%;
+    margin: 0 auto;
 }
 /* Transition */
 .fade-out {
@@ -266,4 +264,3 @@ body, html {
       margin-bottom: 2rem;
     }
 }
-
