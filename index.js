@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
         showImage(currentIndex);
     }, 200);
 
-    // Slide every 3 seconds
+    // Slide every 2 seconds
     setInterval(() => {
         currentIndex++;
         showImage(currentIndex);
@@ -39,25 +39,23 @@ document.addEventListener("DOMContentLoaded", () => {
                 carousel.style.transition = 'none';  // disable transition for instant jump
                 currentIndex = 0;
                 carousel.style.transform = `translateX(0)`;
-            }, 500); // match with CSS transition duration
+            }, 500); // make sure this matched with CSS transition duration
         }
     }, 3000);
 
     // From Home to About page
-    const title = document.querySelector(".title_container");
     const content = document.querySelector(".content_home");
 
-    if (title && content) {
-        title.style.cursor = "pointer"; 
-        title.addEventListener("click", () => {
-            // Add fade-out class to trigger CSS transition
+    if (content) {
+        // Listen for a click anywhere on the page
+        document.addEventListener("click", () => {
+            // Trigger fade-out animation
             content.classList.add("fade-out");
 
-            // Wait for transition to finish before navigating
+            // After the transition, go to About page
             content.addEventListener("transitionend", () => {
-            window.location.href = "pages/about.html";
+                window.location.href = "pages/about.html";
             }, { once: true });
-        })
+        });
     } else return;
-
 });
