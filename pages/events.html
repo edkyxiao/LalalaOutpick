@@ -5,21 +5,44 @@
     <title>events</title>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <link rel="icon" href="images/utilities/logo.ico" type="image/x-icon">
-    <link rel="stylesheet" href="pages.css">
+    <!-- base -->
+    <link rel="stylesheet" href="base.css">
+
+    <!-- events -->
+    <link rel="stylesheet" href="events.css">
+
+    <!-- menu, end -->
+    <link rel="stylesheet" href="menu.css">
 </head>
 <body>
-    <div class="all">
     <div id="menu_container"></div>
     <script src="events.js" defer></script>
-    <div class="blur-bg">
-        <div class="gradient one"></div>
-        <div class="gradient two"></div>
-        <div class="gradient three"></div>
-    </div>
     <div class="content">
         <!-- Title -->
         <h2 class="styled_text page_title">past events</h2>
 
+        <!-- Filter -->
+        <div class="filter">
+            <div class="filter_type">
+                <label for="filter_year">Year:</label>
+                <select id="filter_year">
+                    <option value="all">All</option>
+                    <option value="2024">2024</option>
+                    <option value="2023">2023</option>
+                    <option value="2022">2022</option>
+                </select>
+            </div>
+            <div class="filter_type">
+                <label for="filter_location">Location:</label>
+                <select id="filter_location">
+                    <option value="all">All</option>
+                    <option value="city">City</option>
+                    <option value="lake">Lake</option>
+                    <option value="on_site">On-site</option>
+                    <option value="state_park">State Park</option>
+                </select>
+            </div>
+        </div>
 
         <!-- Map -->
         <div class="image_container image_stack">
@@ -125,28 +148,7 @@
                 <p id="pin_01022022_text">Werribbe Gorge Circuit Walk</p>
             </div>
         </div>
-        <!-- Filter -->
-        <div class="filter">
-            <div class="filter_type">
-                <label for="filter_year">Year:</label>
-                <select id="filter_year">
-                    <option value="all">All</option>
-                    <option value="2024">2024</option>
-                    <option value="2023">2023</option>
-                    <option value="2022">2022</option>
-                </select>
-            </div>
-            <div class="filter_type">
-                <label for="filter_location">Location:</label>
-                <select id="filter_location">
-                    <option value="all">All</option>
-                    <option value="city">City</option>
-                    <option value="lake">Lake</option>
-                    <option value="on_site">On-site</option>
-                    <option value="state_park">State Park</option>
-                </select>
-            </div>
-        </div>
+
 
         <!-- Events -->
         <div class="event_grid">
@@ -404,7 +406,5 @@
     </div>
     <!-- End -->
     <div id="end_container"></div>
-</div>
 </body>
 </html>
-
