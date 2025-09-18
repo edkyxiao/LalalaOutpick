@@ -23,6 +23,12 @@
   justify-self: start;
   padding-left: 5vw;
   transition: transform 0.5s ease;
+  /* border: 1px solid black; */
+}
+.menu_overlay a {
+  display: inline-block;
+  justify-self: start;   /* stay left */
+  align-self: center;
 }
 .menu_overlay a #logo:hover {
     filter: brightness(1.4);
