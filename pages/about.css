@@ -1,0 +1,108 @@
+.about_us {
+    margin: 2rem auto;
+}
+#about_image {
+    margin-top: 2rem;
+    display: block;      
+    margin-left: auto;
+    margin-right: auto; 
+    max-width: 80vw;
+    border: solid rgba(245,245,245,.5);
+}
+
+.about_h2 {
+    margin: 3rem 0 1rem;
+}
+
+.divider {
+    font-weight: 500;
+}
+
+/* Our People */
+.grid {
+    /*transform: translateY(-5%);*/
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    padding: 0 3rem;
+}
+.person {
+    text-align: left;
+    /* border: 1px solid #ccc;
+    border-radius: 5%; 
+    background-color: rgba(249,249,249,.5);*/
+    padding: 1rem;
+}
+.person img {
+    display: block;
+    width: 80%;
+    height: auto;
+    /*border-radius: 5%;*/
+    object-fit: cover;
+    margin:0 auto 0.75rem auto;
+}
+.person h3 {
+    font-weight: normal;
+    font-size: 1.25rem;
+    margin: 2rem;
+    color: #333;
+}
+.person p {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.5;
+    text-align: left;
+}
+
+@media (max-width: 800px) {
+    .styled_text {
+        white-space: nowrap;
+        font-size: 4rem;
+        font-weight: normal;
+        color: navy;
+        font-family: 'Nunito Sans', sans-serif;
+        text-shadow:
+            1px 1px 0 whitesmoke,
+            2px 2px 0 navy;
+        margin: 2rem;
+    }
+    #about_us {
+        width: 80vw;
+        margin-bottom: 1rem;
+    }
+    #about_image_container {
+        display: inline-block;
+        position: relative;
+        transform: translateX(-35%);
+        text-align: center; 
+              
+    }
+    #about_image {
+        max-width: 90vw;
+        height: auto;
+        display: block;  
+    }
+    .about_h2 {
+        white-space: nowrap;
+    }
+    #our_story {
+        width: 80vw;
+    }
+    .grid {
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1.5rem;
+        justify-items: center;
+    }
+    .person {
+        text-align: left;
+        border: 1px solid #ccc;
+        padding: 1rem;
+        border-radius: 10px;
+        width: 80vw;
+        background-color: rgba(249,249,249,.5);
+        margin: 0 auto 1rem;
+        transform: translateX(-47%);
+    }
+}
