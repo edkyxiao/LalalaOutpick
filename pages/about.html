@@ -1,59 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8"/>
-    <title>about</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <link rel="icon" href="images/utilities/logo.ico" type="image/x-icon">
-    <link rel="stylesheet" href="pages.css">
+<meta charset="UTF-8"/>
+<title>About</title>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<link rel="icon" href="images/utilities/logo.ico" type="image/x-icon">
+<!-- base -->
+<link rel="stylesheet" href="base.css">
+
+<!-- about -->
+<link rel="stylesheet" href="about.css">
+
+<!-- menu, end -->
+<link rel="stylesheet" href="menu.css">
 </head>
 <body>
-<div class="all">
-    <div id="menu_container"></div>
-    <script src="pages.js" defer></script>
-    <div class="blur-bg">
-        <div class="gradient one"></div>
-        <div class="gradient two"></div>
-        <div class="gradient three"></div>
+
+<div id="menu_container"></div>
+<script src="about.js" defer></script>
+<div class="content">
+    <div>
+        <h1 class="styled_text page_title">ABOUT US</h1>
+        <p id="about_us">We are Lalala Outpick, a queer women-led environmental group established in 2022.<br>We strive to provide a safe place for queer women and allies from diverse backgrounds,<br>connecting with each other by litter picking around Victoria.</p>
+        <div id="about_image_container"><img id="about_image" src="images/photos/about_image.png"/></div>
     </div>
-    <div class="content">
-        <div>
-            <h2 class="styled_text page_title">about us</h2>
-            <p id="about_us">We are Lalala Outpick, a queer women-led environmental group established in 2022.<br>We strive to provide a safe place for queer women and allies from diverse backgrounds,<br>connecting with each other by litter picking around Victoria.</p>
-            <img id="about_image" src="images/photos/about_image.png"/>
-        </div>
-        <div>
-            <h2 class="about_h2">our story</h2>
-            <p class="divider">——</p>
-            <p id="our_story">Litter picking is the most achievable and accessible thing we can do for our environment.<br>We regard our beautiful landscape and value the unique Australian flora and fauna.<br>
-            <br>We want to connect and encourage queer women and women-identifying allies from<br>diverse backgrounds to see the environment where we are, appreciate the beauty of<br>nature, learn environmental conservation, socialise with like-minded people, to find a<br>sense of belonging within the community by litter picking.<br>
-            <br>Lalala OutPick is a not-for-profit organisation. We facilitate monthly litter picking events<br>around Victoria. We encourage people to join us.</p>
-        </div>
-        <div>
-            <h2 class="about_h2">our people</h2>
-            <p class="divider">——</p>
-            <div class="grid">
-                <div class="person">
-                    <img src="images/people/jingyang.png"/>
-                    <h3>Jing Yang | co-lead</h3>
-                    <p>Jing is a people enthusiast and a budding trash queen.<br>She has a vision to transform the language of waste<br>into valuable materials, transform the linear system<br>which is currently 'take-make-dispose' into a circular<br>economy, a closed loop system of things. She believes<br>waste is purely human invention and there is no such<br>thing as waste in nature, everything has its value.</p>
-                </div>
-                <div class="person">
-                    <img src="images/people/lesleyleluo.png"/>
-                    <h3>Lesley Le Luo | co-lead</h3>
-                    <p>Lesley is a PhD candidate and uni tutor in digital media<br>and screen culture. She is trying to figure out the use of<br>digital media in relation to queer women's<br>representation and identity formation. Lesley believes<br>that human mobility is the reason we waste our<br>environment, but also the solution to save it. She is also<br>an emerging filmmaker and occasionally makes short<br>films focusing on queer women representation.</p>
-                </div>
-                <div class="person">
-                    <img src="images/people/lizli.png"/>
-                    <h3>Liz Li | wildness first aider</h3>
-                    <p>Liz is a landscape architect and qualified wildness first<br>aid responder. Liz spends her 9-5 in the office, tries to<br>work out a Solarpunk future for the urbanized mother<br>earth, then gets out and proud to the blue and green<br>outside working hours. Liz is passionate about plants,<br>rocks, and waves. Start your conversation with her<br>from those items in the Lalala walk, you will get a great<br>chat :&#41;.</p>
-                </div>
+    <div>
+        <h2 class="about_h2">Our Story</h2>
+        <p class="divider">——</p>
+        <p id="our_story">Litter picking is the most achievable and accessible thing we can do for our environment.<br>We regard our beautiful landscape and value the unique Australian flora and fauna.<br>
+        <br>We want to connect and encourage queer women and women-identifying allies from<br>diverse backgrounds to see the environment where we are, appreciate the beauty of<br>nature, learn environmental conservation, socialise with like-minded people, to find a<br>sense of belonging within the community by litter picking.<br>
+        <br>Lalala OutPick is a not-for-profit organisation. We facilitate monthly litter picking events<br>around Victoria. We encourage people to join us.</p>
+    </div>
+    <div>
+        <h2 class="about_h2">Our People</h2>
+        <p class="divider">——</p>
+        <div class="grid">
+            <div class="person">
+                <img src="images/people/jingyang.png"/>
+                <h3>Jing Yang | co-lead</h3>
+                <p>Jing is a people enthusiast and a budding trash queen.<br>She has a vision to transform the language of waste<br>into valuable materials, transform the linear system<br>which is currently 'take-make-dispose' into a circular<br>economy, a closed loop system of things. She believes<br>waste is purely human invention and there is no such<br>thing as waste in nature, everything has its value.</p>
+            </div>
+            <div class="person">
+                <img src="images/people/lesleyleluo.png"/>
+                <h3>Lesley Le Luo | co-lead</h3>
+                <p>Lesley is a PhD candidate and uni tutor in digital media<br>and screen culture. She is trying to figure out the use of<br>digital media in relation to queer women's<br>representation and identity formation. Lesley believes<br>that human mobility is the reason we waste our<br>environment, but also the solution to save it. She is also<br>an emerging filmmaker and occasionally makes short<br>films focusing on queer women representation.</p>
+            </div>
+            <div class="person">
+                <img src="images/people/lizli.png"/>
+                <h3>Liz Li | wildness first aider</h3>
+                <p>Liz is a landscape architect and qualified wildness first<br>aid responder. Liz spends her 9-5 in the office, tries to<br>work out a Solarpunk future for the urbanized mother<br>earth, then gets out and proud to the blue and green<br>outside working hours. Liz is passionate about plants,<br>rocks, and waves. Start your conversation with her<br>from those items in the Lalala walk, you will get a great<br>chat :&#41;.</p>
             </div>
         </div>
     </div>
-    <!-- End -->
-    <div id="end_container"></div>
 </div>
+<!-- End -->
+<div id="end_container"></div>
+
 </body>
 </html>
-
