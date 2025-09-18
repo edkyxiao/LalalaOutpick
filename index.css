@@ -40,7 +40,7 @@ body, html {
 
 /* Content */
 .content_home {
-    margin: 5% 20%;
+    margin: 12vh 20vw;
     opacity: 1;
     transition: opacity 0.5s ease;
     /* border: 1px solid black; */
