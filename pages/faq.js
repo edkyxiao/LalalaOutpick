@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
         navItems.forEach(({ id, url }) => {
             const el = document.getElementById(id);
             if (el) {
-                el.style.cursor = "pointer"; // better UX
+                el.style.cursor = "pointer"; 
                 el.addEventListener("click", () => {
                     window.location.href = url;
                 });
@@ -27,14 +27,14 @@ document.addEventListener("DOMContentLoaded", () => {
         const menu = document.getElementById("menu_more");
         const menu_title = document.getElementById("title");
 
-        if (toggleBtn && menu && menu_title) {
+        if (toggleBtn && menu) {
             toggleBtn.addEventListener("click", () => {
-                menu.classList.toggle("show");
-                menu_title.classList.toggle("hide");
+                menu.classList.toggle("active"); // match CSS
             });
         } else {
-            console.error("Menu toggle button, menuMore or title element not found");
+            console.error("Menu toggle button not found");
         }
+
 
         // Back to top button
         const backToTop = document.getElementById('backToTop');
@@ -47,21 +47,6 @@ document.addEventListener("DOMContentLoaded", () => {
             });
         }
     });
-
-    // Images
-    const images = document.querySelectorAll('.fade_image');
-
-    const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-        entry.target.classList.add('visible');   // fade in
-        } else {
-        entry.target.classList.remove('visible'); // fade out when scrolled past
-        }
-    });
-    }, { threshold: 0.2 }); // 20% of image must be visible
-
-    images.forEach(img => observer.observe(img));
 
     // End
     fetch('end.html')
