@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
         navItems.forEach(({ id, url }) => {
             const el = document.getElementById(id);
             if (el) {
-                el.style.cursor = "pointer"; // better UX
+                el.style.cursor = "pointer"; 
                 el.addEventListener("click", () => {
                     window.location.href = url;
                 });
@@ -27,14 +27,14 @@ document.addEventListener("DOMContentLoaded", () => {
         const menu = document.getElementById("menu_more");
         const menu_title = document.getElementById("title");
 
-        if (toggleBtn && menu && menu_title) {
+        if (toggleBtn && menu) {
             toggleBtn.addEventListener("click", () => {
-                menu.classList.toggle("show");
-                menu_title.classList.toggle("hide");
+                menu.classList.toggle("active"); // match CSS
             });
         } else {
-            console.error("Menu toggle button, menuMore or title element not found");
+            console.error("Menu toggle button not found");
         }
+
 
         // Back to top button
         const backToTop = document.getElementById('backToTop');
@@ -47,6 +47,11 @@ document.addEventListener("DOMContentLoaded", () => {
             });
         }
     });
+
+    // End
+    fetch('end.html')
+        .then(response => response.text())
+        .then(html => document.getElementById('end_container').innerHTML = html);
 
     // Events
     document.querySelectorAll('.event_button').forEach(btn => {
