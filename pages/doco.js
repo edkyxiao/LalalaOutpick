@@ -53,27 +53,33 @@ document.addEventListener("DOMContentLoaded", () => {
         .then(response => response.text())
         .then(html => document.getElementById('end_container').innerHTML = html);
 
-    // Doco carousel
-    const track = document.querySelector(".carousel");
-    const images = ["images/photos/outpicker.png", 
-                    "images/photos/outpicker2.png", 
-                    "images/photos/outpicker3.png",
-                    "images/photos/outpicker4.png"];
-    let currentIndex = 0;
+    // Doco carousel     
+const track = document.querySelector(".carousel");
+const container = document.querySelector(".photo_container"); // Get the container
+const images = ["images/photos/outpicker.png",                      
+                "images/photos/outpicker2.png",                      
+                "images/photos/outpicker3.png",                     
+                "images/photos/outpicker4.png"];
+let currentIndex = 0;
 
-    function showNextImage() {
+function getContainerWidth() {
+    return container.offsetWidth; // Get actual pixel width
+}
+
+function showNextImage() {
     const nextIndex = (currentIndex + 1) % images.length;
+    const containerWidth = getContainerWidth();
 
     // Add the next image to the end
     const nextImg = document.createElement("img");
     nextImg.src = images[nextIndex];
     track.appendChild(nextImg);
-    
-    // Slide left
+        
+    // Slide left using actual container width
     requestAnimationFrame(() => {
-        track.style.transform = "translateX(-30vw)"; // match width
+        track.style.transform = `translateX(-${containerWidth}px)`;
     });
-    
+        
     // After animation ends
     track.addEventListener("transitionend", function handler() {
         track.removeEventListener("transitionend", handler);
@@ -85,38 +91,40 @@ document.addEventListener("DOMContentLoaded", () => {
         // Force reflow before re-enabling transition
         void track.offsetWidth;
         track.style.transition = "transform 0.5s ease";
-        
+                
         currentIndex = nextIndex;
     });
-    }
-    function showPrevImage() {
-        const prevIndex = (currentIndex - 1 + images.length) % images.length;
+}
 
-        // Add the previous image to the start
-        const prevImg = document.createElement("img");
-        prevImg.src = images[prevIndex];
-        track.insertBefore(prevImg, track.firstElementChild);
+function showPrevImage() {
+    const prevIndex = (currentIndex - 1 + images.length) % images.length;
+    const containerWidth = getContainerWidth();
 
-        // Start offset to the left (so it looks like we're sliding right)
-        track.style.transition = "none";
-        track.style.transform = "translateX(-700px)"; // match width
+    // Add the previous image to the start
+    const prevImg = document.createElement("img");
+    prevImg.src = images[prevIndex];
+    track.insertBefore(prevImg, track.firstElementChild);
 
-        // Force reflow before moving to 0
-        void track.offsetWidth;
+    // Start offset to the left
+    track.style.transition = "none";
+    track.style.transform = `translateX(-${containerWidth}px)`;
 
-        // Slide right into place
-        track.style.transition = "transform 0.5s ease";
-        track.style.transform = "translateX(0)";
+    // Force reflow before moving to 0
+    void track.offsetWidth;
 
-        // After animation ends
-        track.addEventListener("transitionend", function handler() {
-            track.removeEventListener("transitionend", handler);
-            // Remove the last image
-            track.removeChild(track.lastElementChild);
-            currentIndex = prevIndex;
-        });
-    }
+    // Slide right into place
+    track.style.transition = "transform 0.5s ease";
+    track.style.transform = "translateX(0)";
 
-    document.getElementById("nextBtn").addEventListener("click", showNextImage);
-    document.getElementById("prevBtn").addEventListener("click", showPrevImage);
+    // After animation ends
+    track.addEventListener("transitionend", function handler() {
+        track.removeEventListener("transitionend", handler);
+        // Remove the last image
+        track.removeChild(track.lastElementChild);
+        currentIndex = prevIndex;
+    });
+}
+
+document.getElementById("nextBtn").addEventListener("click", showNextImage);
+document.getElementById("prevBtn").addEventListener("click", showPrevImage);
 });
