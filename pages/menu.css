@@ -145,6 +145,12 @@
 }
 
 @media (max-width: 768px) {
+  /* Menu */
+  #logo {
+    width: 25vw;
+  }
+
+  /* End */
     .social_media {
         position: static;
         transform: none;
@@ -153,7 +159,7 @@
     }
 
     .social_media img {
-        width: 3vw;
+        width: 10vw;
         height: auto;
     }
 }
