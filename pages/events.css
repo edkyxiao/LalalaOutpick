@@ -30,6 +30,9 @@
     outline: none;
     box-shadow: 0 0 5px rgba(0, 0, 128, 0.3);
 }
+#for_mobile {
+    display: none;
+}
 .image_container {
     position: relative;
 
@@ -453,4 +456,68 @@
     background-color: navy;
     color: white;
     cursor: pointer;
+}
+
+@media (max-width: 800px) {
+    .filter {
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-weight: lighter;
+        padding: 2vh 8vw;
+        margin: 2rem auto 4rem;
+        font-size: 1rem;
+        justify-self: center;
+        justify-content: center;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 4rem;
+        /* border: 1px solid black; */
+    }
+    .filter label {
+        font-weight: lighter;
+        font-size: 1rem;
+        margin-right: 0.5rem;
+    }
+    .filter select {
+        padding: 0.5rem;
+        border-radius: 0rem;
+        border: 1px outset rgba(0, 0, 128, .8);
+        background-color: rgba(245, 245, 245, .8);
+        font-size: 1rem;
+        transition: all 0.2s ease;
+    }
+    .image_container {
+        position: relative;
+        width: 90vw;
+        height: auto;
+        margin-top: 5vh;
+        padding-top: 25vh;
+        padding-bottom: 35vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .event_pin {
+        position: relative;
+        display: none;
+    }
+    #for_mobile {
+        display: block;
+        z-index: 10;
+        color:rgb(23, 13, 242);
+        text-shadow: 0.5px 0.5px 0.5px rgba(0, 0, 0, .6);
+        font-weight: light;
+        font-family: 'Nunito Sans';
+    }
+    .event_grid {
+        width: 80vw;
+    }
+    .text h3 {
+        font-size: 1rem;
+    }
+    .text p {
+        font-size: 0.75rem;
+    }
+    .event_button {
+        font-size: 0.5rem;
+    }
 }
