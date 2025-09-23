@@ -69,3 +69,52 @@ button {
     margin: 0 auto;
     width: 15vw;
 }
+
+@media (max-width: 800px) {
+    .outpicker {
+        justify-self: center;
+        display: block;
+        width: 100vw;
+        /* border: 1px solid black; */
+    }
+    .photo_container {
+        width: 80vw;
+        margin: 0 auto;      
+    }
+    .carousel {
+        margin-bottom: .5vh;
+    }
+    #prevBtn img,
+    #nextBtn img {
+        width: 10vw;
+    }
+    .entry {
+        padding-left: 0;
+    }
+    #op_title {
+        margin: 2vh auto -1.5vh;
+        /* border: 1px solid black; */
+    }
+    #op_credits {
+        font-weight: bold;
+        font-size: 1rem;
+        /* border: 1px solid black; */
+    }
+    #op_info {
+        margin: 0 0 3vh;
+    }
+    .posters {
+        width: 80vw;
+        justify-self: center;
+        margin-top: 2vh;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0.5vw;
+        /* border: 1px solid black; */
+    }
+    .posters img {
+        display: relative;
+        margin: 0 auto;
+        width: 25vw;
+    }
+}
