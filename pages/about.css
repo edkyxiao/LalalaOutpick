@@ -71,11 +71,10 @@
         margin-bottom: 1rem;
     }
     #about_image_container {
-        display: inline-block;
-        position: relative;
-        transform: translateX(-35%);
+        justify-self: center;
         text-align: center; 
-              
+        display: block;
+        margin: 0 auto;
     }
     #about_image {
         max-width: 90vw;
@@ -89,20 +88,22 @@
         width: 80vw;
     }
     .grid {
-        margin: 0 auto;
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        justify-self: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        place-items: center;
         gap: 1.5rem;
-        justify-items: center;
+        width: 80vw;
+        margin: 0 10vw;
     }
     .person {
+        display: block;
+        justify-self: center;
         text-align: left;
         border: 1px solid #ccc;
         padding: 1rem;
-        border-radius: 10px;
-        width: 80vw;
         background-color: rgba(249,249,249,.5);
         margin: 0 auto 1rem;
-        transform: translateX(-47%);
     }
 }
