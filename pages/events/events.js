@@ -6,11 +6,11 @@ document.addEventListener("DOMContentLoaded", () => {
         document.getElementById('menu_container').innerHTML = html;
 
         const navItems = [
-            { id: 'menu_about', url: '../about.html' },
-            { id: 'menu_doco', url: '../doco.html' },
-            { id: 'menu_events', url: '../events.html' },
-            { id: 'menu_faq', url: '../faq.html' },
-            { id: 'menu_contact', url: '../contact.html' },
+            { id: 'menu_about', url: 'about.html' },
+            { id: 'menu_doco', url: 'doco.html' },
+            { id: 'menu_events', url: 'events.html' },
+            { id: 'menu_faq', url: 'faq.html' },
+            { id: 'menu_contact', url: 'contact.html' },
         ];
 
         navItems.forEach(({ id, url }) => {
@@ -27,14 +27,14 @@ document.addEventListener("DOMContentLoaded", () => {
         const menu = document.getElementById("menu_more");
         const menu_title = document.getElementById("title");
 
-        if (toggleBtn && menu && menu_title) {
+        if (toggleBtn && menu) {
             toggleBtn.addEventListener("click", () => {
-                menu.classList.toggle("show");
-                menu_title.classList.toggle("hide");
+                menu.classList.toggle("active"); // match CSS
             });
         } else {
-            console.error("Menu toggle button or title element not found");
+            console.error("Menu toggle button not found");
         }
+
 
         // Back to top button
         const backToTop = document.getElementById('backToTop');
@@ -91,4 +91,5 @@ document.addEventListener("DOMContentLoaded", () => {
     fetch('end.html')
         .then(response => response.text())
         .then(html => document.getElementById('end_container').innerHTML = html);
+
 });
