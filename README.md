@@ -73,4 +73,4 @@ The contact form uses Formspree (endpoint: `https://formspree.io/f/myzpqave`) fo
 
 The website includes an Acknowledgment of Country, recognizing Traditional Owners and Custodians of the land, with respect for Indigenous Elders past, present, and emerging.
 
-*Website development by Edward Xiao*
+*Website design and development by Edward Xiao*
