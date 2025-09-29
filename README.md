@@ -2,7 +2,6 @@
 
 A website for LALALA OUTPICK - a queer women-led environmental group promoting environmental awareness and community engagement.
 
-**Tagline:** *queer | out | proud*
 
 ## About
 
