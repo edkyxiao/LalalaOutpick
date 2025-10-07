@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Contact Us</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes, viewport-fit=cover"/>
+    <link rel="icon" href="images/utilities/logo.ico" type="image/x-icon">
+    <!-- base -->
+    <link rel="stylesheet" href="base.css">
+
+    <!-- about -->
+    <link rel="stylesheet" href="contact.css">
+
+    <!-- menu, end -->
+    <link rel="stylesheet" href="menu.css">
+</head>
+<body>
+    <div id="menu_container"></div>
+    <script src="contact.js" defer></script>
+    <div class="content">
+        <div class="contact_title">
+            <h2 class="styled_text page_title">Join Us</h2>
+        </div>
+        <div class="contact_text">
+            <div class="contact_entry" id="contact_email">
+                <h2>Email</h2>
+                <p>lalalaoutpick@gmail.com</p>
+            </div>
+            <div class="contact_entry" id="contact_sm">
+                <h2>Social Media</h2>
+                <div class="social_media_icons">
+                    <a href="https://www.facebook.com/groups/344727720937871" target="_blank" rel="noopener noreferer"><img id="facebook" src="images/contact/fb.png" alt="Facebook"/></a>
+                    <a href="https://www.instagram.com/lalalaoutpick?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferer"><img id="instagram" src="images/contact/instagram.png" alt="Instagram"/></a>
+                </div>
+            </div>
+            <div class="contact_entry" id="ct_text">
+                <h2>Contact Form</h2>
+            </div>
+            <br>
+            <form
+                action="https://formspree.io/f/myzpqave"
+                class="fs-form"
+                target="_top"
+                method="POST">
+                <div class="fs-field">
+                    <label class="fs-label" for="name">Full Name</label>
+                    <input class="fs-input" id="name" name="name" required />
+                </div>
+                <div class="fs-field">
+                    <label class="fs-label" for="email">Email</label>
+                    <input class="fs-input" id="email" name="email" required />
+                </div>
+                <div class="fs-field">
+                    <label class="fs-label" for="message">Message</label>
+                    <textarea
+                    class="fs-textarea"
+                    id="message"
+                    name="message"
+                    required
+                    ></textarea>
+                </div>
+                <div class="fs-button-group">
+                    <button class="fs-button" type="submit">submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- End -->
+    <div id="end_container"></div>
+</body>
+</html>
